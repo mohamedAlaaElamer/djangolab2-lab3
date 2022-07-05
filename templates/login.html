@@ -1,0 +1,15 @@
+<form method="post" >
+    {%csrf_token%}
+    Username:
+    <input type="text" name="username" >
+    </br>
+    Password:
+    <input type="password" name="password">
+    <input type="submit" value="Login">
+    <div style="color:red">
+        <h2>
+            {{error}}
+        </h2>
+    </div>
+</form>
+<h1>{{username}}</h1>

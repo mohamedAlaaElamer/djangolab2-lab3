@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show subjects</title>
+</head>
+<body>
+{%for u in subs%}
+<div>
+<form method="post">
+    {%csrf_token%}
+    <input type="hidden" name="determine" value={{u.id}}>
+  <label>{{u.id}}</label>
+    <br>
+  <label>{{u.name}}</label>
+    <br>
+  <label>{{u.hours}}</label>
+    <br>
+  <input type="submit">
+</form>
+</div>
+<br> <br>
+{%endfor%}
+</body>
+</html>
